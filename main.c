@@ -25,7 +25,7 @@ void victim_function(size_t x)
     test &= x >= 0;  //if we don't check this, than negative values either cause
                 //an error or we could have just read at those locations, in which
                 //case using this program is a needless complexity.
-    if (test)
+    if (test)  //this test is only true for legal addresses of array1.
     {
         temp &= array2[array1[x] * 512];
     }
